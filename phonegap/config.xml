@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id          = "com.myendoftheweb.unipop"
+        version     = "1.0.0" >
+	
+	<name>UniPop</name>
+	
+    <description>
+		UniPop is a social network for university students in Scotland.
+    </description>
+
+    <author href="https://myendoftheweb.com" email="unipop@myendoftheweb.com">
+        UniPop
+    </author>
+	
+	<preference name="phonegap-version" value="3.6.3"/>
+	<preference name="fullscreen" value="true" />
+	
+	<icon src="icon.png" gap:role="default" />
+	
+    <gap:platform name="android" />
+	
+	<gap:plugin name="org.apache.cordova.inappbrowser" source="plugins.cordova.io"/>
+	<gap:plugin name="org.apache.cordova.network-information" source="plugins.cordova.io"/>
+	
+	<preference name="permissions" value="none"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	
+	<preference name="android-minSdkVersion" value="19" />
+
+	<gap:config-file platform="android" parent="/manifest">
+		<supports-screens 
+			android:xlargeScreens="true" 
+			android:largeScreens="true" 
+			android:normalScreens="true"
+			android:smallScreens="false" />
+	</gap:config-file>
+	
+	<access origin="http://myendoftheweb.com" subdomains="true"></access>
+
+</widget>

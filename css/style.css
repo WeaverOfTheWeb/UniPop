@@ -1,0 +1,468 @@
+*{
+	box-sizing: border-box;
+	line-height: 1;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
+}
+
+body{
+	background: #f5f5f5;
+	font-family: arial;
+}
+
+#university{
+	display: block;
+	height: 34px;
+	margin: 5px auto;
+	position: relative;
+	width: calc(100% - 20px);
+}
+
+input{
+	background: #fff;
+	border: 0;
+	height: 40px;
+	text-indent: 10px;
+	width: 100%;
+}
+input[type=submit],input[type=button]{
+	background: #26A69A;
+	color: #fff;
+	text-indent: 0;
+}
+input[type=checkbox]{
+	float: left;
+	height: 16px;
+	margin: 0 !important;
+	width: auto;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#large_logo{
+	background: url('../images/icons/logo.svg') no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 100px;
+	margin: 10px auto;
+	width: 200px 
+}
+
+#profile_cont{
+	margin-top: 60px;
+	text-align: center;
+}
+#profile_cont img{border-radius:50%;}
+#profile_cont input{
+	margin: 5px 10px;
+	width: calc(100% - 20px);
+}
+#login_cont{
+	color: #fff;
+	margin: 0 auto;
+	max-width: 500px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+#login_cont input{
+	margin: 5px 10px;
+	width: calc(100% - 20px);
+}
+#login_error{
+	background: #F44336;
+	color: #fff;
+	height: auto;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+#login_error p:first-letter{
+	text-transform: capitalize;
+}
+
+#remember{visibility: hidden;}
+
+#check_btn{
+	background-image: url('../images/icons/unchecked.svg');
+	background-color: #F44336;
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	color: #fff;
+	height: 40px;
+	margin: 5px 10px;
+	padding-top: 12px;
+	text-align: center;
+	width: calc(100% - 20px);
+}
+
+.checked{
+	background-image: url('../images/icons/checked.svg') !important;
+	background-color: #F44336 !important;
+	background-position: 10px center !important;
+	background-repeat: no-repeat !important;
+	background-size: 20px !important;
+}
+
+#sign_btn{
+	background: #FFA726;
+	color: #fff;
+	height: 40px;
+	width: 100%;
+}
+
+
+#comments{
+	color: #999;
+	font-size: 12px;
+	list-style-type: none;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+#comments li{
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	height: auto;
+	min-height: 80px;
+	text-align: justify;
+}
+#comments li:first-child{
+	border-top: 1px solid #ddd;
+}
+#comments .comment{
+	color: #333;
+	font-size: 14px;
+	line-height: 1.25;
+}
+#comments .delete_comment, #comments .report_comment{
+	float: right;
+}
+#no_comment{
+	color: #777;
+	padding-top: 20px;
+	text-align: center;
+	width: 100%
+}
+.sml_icn{
+	border-radius: 0 !important;
+	float: none !important;
+	height: 12px !important;
+	width: 12px !important;
+}
+
+#thread_error{
+	background: #f44336;
+	bottom: 50px;
+	color: #fff;
+	height: 40px;
+	padding-top: 12px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 3;
+}
+#thread_error:first-letter{text-transform:capitalize}
+
+#reply_cont{
+	background: #2A3B61;
+	bottom: 0;
+	height: 50px;
+	padding: 5px;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+#reply_cont input{float: left;}
+#reply_cont input[type=text]{
+	text-indent: 10px;
+	width: calc(100% - 50px);
+}
+#reply_cont input[type=submit]{
+	background: url('../images/icons/send.svg') no-repeat;
+	background-color: #fff;
+	background-position: center;
+	background-size: 20px;
+	width: 50px;
+}
+
+.slide{
+	margin-top: 50px !important;
+	transition: all .5s !important;
+}
+
+#title{
+	margin-top: 100px;
+}
+#title img{
+	border-radius: 50%;
+	float: left;
+	height: 80px;
+	margin-left: 10px;
+	width: 80px;
+}
+#thread_title{
+	float: left;
+	font-size: 18px;
+	height: 50px;
+	padding: 10px;
+	word-wrap: break-word;
+	width: calc(100% - 100px);
+}
+#thread_title:first-letter{text-transform: capitalize;}
+#name_time{
+	font-size: 12px;
+	padding: 10px;
+}
+.clear{clear:both}
+
+#back_btn{
+	background: url('../images/icons/backArrow.svg') no-repeat;
+	background-color: #ddd;
+	background-position: 5px center;
+	background-size: 20px;
+	color: #444;
+	font-size: 12px;
+	height: 40px;
+	top: 50px;
+	padding: 14px 30px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+#create_btn{
+	background: url('../images/icons/write.svg') no-repeat;
+	background-color: #f44336;
+	background-position: center center;
+	background-size: 20px;
+	border-radius: 50%;
+	bottom: 40px;
+	height: 60px;
+	position: fixed;
+	right: 20px;
+	width: 60px;
+	z-index: 2;
+}
+#create_thread{
+	background: #26A69A;
+	height: auto;
+	padding: 10px;
+	margin: -150px 10px;
+	position: fixed;
+	transition: all .5s;
+	width: calc(100% - 20px);
+	z-index: 2;
+}
+
+#update_area input{
+	margin: 5px 0;
+}
+#update_error{
+	background: #f44336;
+	color: #fff;
+	padding: 10px;
+	position: fixed;
+	text-align: center;
+	top: 50px;
+	width: 100%;
+	z-index: 2;
+}#update_error:first-letter{text-transform:capitalize}
+
+#create_thread input[type=text]{
+	margin-bottom: 10px;
+	text-indent: 10px;
+}
+#create_thread input[type=submit]{
+	background: rgba(255,255,255,.25);
+	color: #fff;
+	float: right;
+	width: calc(50% - 5px);
+}
+#close_btn{
+	background: rgba(255,255,255,.25);
+	color: #fff;
+	float: left;
+	height: 40px;
+	padding-top: 3px;
+	text-align: center;
+	width: calc(50% - 5px);
+}
+
+#nav{
+	background: #2a3b61;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+#nav_prof{
+	color: #fff;
+	float: left;
+	height: 30px;
+	margin: 10px 0 0 10px;
+	overflow: hidden;
+	width: 60px;
+} 
+#nav_prof div{
+	float: left;
+	margin-top: 6px;
+	text-align: center;
+	width: 30px;
+}
+#nav_prof img{
+	border-radius: 50%;
+	float: left;
+	height: auto;
+	max-height: 100%;
+	overflow: hidden;
+	width: 30px;
+}
+#nav_list{
+	background: #ddd;
+	list-style-type: none;
+	position: fixed;
+	display: none;
+	top: 50px;
+	width: 100%;
+	z-index: 3;
+}
+#nav_list li{
+	background: #FFA726;
+	height: auto;
+	padding: 14px
+}
+#nav_list li:nth-child(even){background-color: #FF9800;}
+#nav_list li a{color: white}
+
+#logo{
+	background: url('../images/icons/logo.svg') no-repeat;
+	background-size: contain;
+	color: white;
+	font-size: 12px;
+	height: 30px;
+	left: 50%;
+	margin-left: -40px;
+	position: absolute;
+	top: 12px;
+	width: 82px;
+}
+
+.unverified, .nothreads{
+	color: #666;
+	font-size: 12px;
+	padding-top: 10px;
+	text-align: center;
+}
+.unverified a{
+	color: #222;
+	text-decoration: underline;
+}
+
+#home{
+	background: url('../images/icons/home.svg') no-repeat;
+	background-size: contain;
+	float: right;
+	height: 16px;
+	margin: 18px 18px 0 0;
+	width: 16px;
+}
+#nav_ref{
+	background: url('../images/icons/refresh.svg') no-repeat;
+	background-size: contain;
+	float: right;
+	height: 16px;
+	margin: 18px 18px 0 0;
+	width: 16px;
+}
+
+#search{
+	background-color: #2196F3;
+	height: 40px;
+	top: 50px;
+	position: fixed;
+	width: 100%
+}
+#search input{
+	background: transparent;
+	color: #fff;
+	float: left;
+	height: 40px;
+	width: calc(100% - 55px);
+}
+#search ::-webkit-input-placeholder {
+   color: #ddd !important;
+}
+#search_btn{
+	float: right;
+	height: 16px;
+	margin: 12px 18px;
+	width: 18px;
+}
+	
+#feed{
+	background: #efefef;
+	list-style-type: none;
+	margin-top: 90px;
+}
+#feed li, .posts li, .threads li{
+	border-bottom: 1px solid #bbb;
+	height: 80px;
+	padding: 10px
+}
+#feed .unverified{
+	position: absolute;
+	top: -40px;
+	width: 100%;
+}
+
+.posts, .threads{background: #eee;}
+
+.threads{
+	max-height: 300px;
+	overflow-y: auto;
+}
+.posts li, .threads li{
+	height: auto;
+	padding: 20px;
+	text-align: left
+}
+.posts li:first-child, .threads li:first-child{border-top: 1px solid #ccc;}
+
+.profile_pic{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	float: left;
+	height: 60px;
+	margin-right: 10px;
+	width: 60px;
+}
+
+.title{
+	display: block;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.title:first-letter{text-transform: capitalize;}
+
+.username{
+	float: left;
+	font-size: 14px;
+	padding-top: 28px;
+}
+
+.time{
+	float: right;
+	font-size: 12px;
+	padding-top: 31px;
+}.time:first-letter{text-transform: capitalize;}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: #2a3b61;
+			background-image: url('loading.gif');
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		html,body{
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+	</style>
+	<script src="cordova.js"></script>
+	<script>
+		document.addEventListener("deviceready", OnDeviceReady, false);
+
+		function OnDeviceReady(){
+			console.log("Device is ready");
+			if(navigator.connection.type == "none" || navigator.connection.type == "unknown"){
+				alert('A network connection is needed to use this app!');
+				if(navigator.app){
+					navigator.app.exitApp();
+				}else if(navigator.device){
+					navigator.device.exitApp();
+				}
+			} else {
+				window.open('http://myendoftheweb.com/unipop/','_self','location=no');	
+			}
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
